@@ -47,6 +47,7 @@ export default function HomePage() {
                   height={40}
                   className="h-8 md:h-10 w-auto"
                   priority
+                  fetchPriority="high"
                 />
               </a>
             </div>
@@ -76,15 +77,23 @@ export default function HomePage() {
 
         {/* Background image - blurred, organic blob shape */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-4 md:mt-8">
-          <div 
-            className="w-[65%] sm:w-[55%] md:w-[50%] lg:w-[42%] max-w-2xl aspect-[16/10] blur-xl opacity-30 md:opacity-35"
+          <div
+            className="relative w-[65%] sm:w-[55%] md:w-[50%] lg:w-[42%] max-w-2xl aspect-[16/10] blur-xl opacity-30 md:opacity-35 overflow-hidden"
             style={{
-              backgroundImage: "url('/hispanic.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
               borderRadius: "70% 30% 60% 40% / 40% 70% 30% 60%",
             }}
-          />
+          >
+            <Image
+              src="/hispanic.jpg"
+              alt=""
+              fill
+              priority
+              fetchPriority="high"
+              sizes="(max-width: 640px) 65vw, (max-width: 1024px) 55vw, 42vw"
+              className="object-cover"
+              quality={60}
+            />
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
