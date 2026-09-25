@@ -19,16 +19,16 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "samewaves | different minds. same wave.",
-  description: "A community empowering neurodivergent youth through authentic connection. samewaves turns neurodivergent youth into connected communities.",
+  title: "Bishop England Spanish Club | Habla. Conecta. Descubre.",
+  description: "A student-led community for Spanish language, culture, and real experiences at Bishop England High School. Come as you are — you only need to be curious.",
   icons: [
-    { rel: "icon", url: "/favicon.png", type: "image/png" },
-    { rel: "apple-touch-icon", url: "/favicon.png" },
+    { rel: "icon", url: "/besc.png", type: "image/png" },
+    { rel: "apple-touch-icon", url: "/besc.png" },
   ],
   openGraph: {
-    title: "samewaves",
-    description: "different minds. same wave.",
-    siteName: "samewaves",
+    title: "Bishop England Spanish Club",
+    description: "Habla. Conecta. Descubre. Spanish is more than a class.",
+    siteName: "Bishop England Spanish Club",
   },
 }
 
@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(inter.variable, sourceSerif.variable)}>
-      <body className="font-sans bg-[#F5F1EB] text-[#1a1a1a] antialiased">
+      <body className="font-sans bg-[#F6F4EF] text-[#0A163C] antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>
